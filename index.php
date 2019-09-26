@@ -7,10 +7,11 @@
         include 'header/header.php';
         // Calling the connection for database
         include 'connection.php';
-        // Calling the model Query in object folder
+        // Calling the model Query in model folder
         include 'model/queries.php';
         
         //Connecting project to database
+
         $con = new connection();
         $db = $con->connect();
 
@@ -51,7 +52,8 @@
                 <!-- Fetching all profile from database -->
                 <?php
                     $talents = $query->getProfiles();
-                    while ($row = $talents->fetch(PDO::FETCH_ASSOC)) {
+                    while ($row = $talents->fetch(PDO::FETCH_ASSOC)) 
+                    {
                         extract($row);
                         echo '
                             <tr>
@@ -231,7 +233,8 @@
                 }, function (data) {
                 if(data){
                     for(var i=0; i < id.length; i++){
-			            let ids = id[i];
+                        let ids = id[i];
+                        // HTTP Request 
 			            $.ajax({
 			              	type: "POST",
                             url: "controller/delete_profile.php",
