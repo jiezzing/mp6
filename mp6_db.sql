@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 26, 2019 at 09:04 AM
+-- Generation Time: Sep 26, 2019 at 12:59 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -34,16 +34,20 @@ CREATE TABLE `profile` (
   `prof_apartment` varchar(50) NOT NULL,
   `prof_landlord` varchar(50) NOT NULL,
   `prof_address` varchar(100) NOT NULL,
-  `prof_talents` varchar(150) NOT NULL
+  `prof_talents` varchar(150) NOT NULL,
+  `prof_status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `profile`
 --
 
-INSERT INTO `profile` (`prof_id`, `prof_name`, `prof_apartment`, `prof_landlord`, `prof_address`, `prof_talents`) VALUES
-(1, 'Shammah Casumpang', 'Bahay ni Shammah', 'Malaking Kapatid', 'Bangkas A', 'Dancing, Singing, Coding'),
-(2, 'Shammae Supsup', 'Apartmenthol', 'Mr. Crab', 'Bangkas B', 'Dancing, Reading, Coding, Acting, Praying');
+INSERT INTO `profile` (`prof_id`, `prof_name`, `prof_apartment`, `prof_landlord`, `prof_address`, `prof_talents`, `prof_status`) VALUES
+(1, 'Shammah Casumpang', 'Bahay ni Shammah', 'Malaking Kapatid', 'Bangkas A', 'Dancing, Singing, Coding', 'Deleted'),
+(2, 'Shammae Supsup', 'Apartmenthol', 'Mr. Crab', 'Bangkas B', 'Dancing, Reading, Coding, Acting, Praying', 'Deleted'),
+(3, 'hahaha', 'Bahay ni Shammah', 'Mr. Crab', 'NASIPIT, TALAMBAN, CEBU CITY', 'Dancing, Reading, Acting', 'Active'),
+(4, 'Fritz Gerald Dumdum', 'Bahay ni Shammah', 'Mr. Crab', 'NASIPIT, TALAMBAN, CEBU CITY', 'Dancing, Reading, Coding', 'Active'),
+(5, 'x', 'x', 'x', 'Bangkas A', 'Dancing, Reading, Singing, Acting', 'Deleted');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +67,7 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `prof_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `prof_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
